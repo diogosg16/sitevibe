@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2d5016;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 300;
+}
+
+main {
+    display: grid;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    color: #2d5016;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #4a7c2a;
+    padding-bottom: 10px;
+}
+
+/* Estilos da Seção Meteorologia */
+.weather-container {
+    min-height: 200px;
+}
+
+.weather-loading {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+
+.weather-loading p {
+    font-size: 1.1rem;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.weather-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.weather-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    color: white;
+}
+
+.weather-icon {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.weather-temp {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.weather-desc {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.weather-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #4a7c2a;
+}
+
+.weather-item .label {
+    font-weight: 600;
+    color: #666;
+}
+
+.weather-error {
+    text-align: center;
+    padding: 40px;
+    color: #d32f2f;
+}
+
+.error-note {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Estilos da Previsão de 5 Dias */
+.weather-forecast-container {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 2px solid #e9ecef;
+}
+
+.weather-forecast-container h3 {
+    font-size: 1.3rem;
+    color: #2d5016;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.weather-forecast {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.forecast-day {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.forecast-day:hover {
+    border-color: #4a7c2a;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-date {
+    font-weight: 600;
+    color: #2d5016;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.forecast-icon {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+.forecast-temps {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+    align-items: baseline;
+}
+
+.temp-max {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.temp-min {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #666;
+}
+
+.forecast-desc {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 8px;
+    text-transform: capitalize;
+}
+
+.forecast-precip {
+    font-size: 0.8rem;
+    color: #667eea;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* Estilos da Seção Restaurantes */
+.restaurants-list {
+    display: grid;
+    gap: 20px;
+}
+
+.restaurant-item {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    border-left: 5px solid #4a7c2a;
+    transition: all 0.3s ease;
+}
+
+.restaurant-item:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+}
+
+.restaurant-item h3 {
+    color: #2d5016;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.restaurant-item p {
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.btn-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #4a7c2a;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-link:hover {
+    background: #2d5016;
+    transform: scale(1.05);
+}
+
+/* Estilos da Seção Atividades */
+.activities-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.activity-item {
+    display: block;
+    padding: 25px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px;
+    text-decoration: none;
+    color: inherit;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.activity-item:hover {
+    border-color: #4a7c2a;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.activity-item h3 {
+    color: #2d5016;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.activity-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+    }
+
+    .weather-temp {
+        font-size: 2.5rem;
+    }
+
+    .weather-icon {
+        font-size: 3rem;
+    }
+
+    .activities-list {
+        grid-template-columns: 1fr;
+    }
+
+    .weather-details {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    header {
+        padding: 20px 15px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+}
+
