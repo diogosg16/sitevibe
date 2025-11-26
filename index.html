@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horta do Furão Country Charme</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">🌿 HORTA DO FURÃO 🌿</h1>
+            <p class="subtitle">Toda a informação pronta para si</p>
+        </header>
+
+        <main>
+            <!-- Seção Meteorologia -->
+            <section class="card weather-section">
+                <h2>🌤️ Meteorologia em Marvão</h2>
+                <div class="weather-container">
+                    <div class="weather-loading" id="weatherLoading">
+                        <p>Carregando informações meteorológicas...</p>
+                    </div>
+                    <div class="weather-content" id="weatherContent" style="display: none;">
+                        <div class="weather-main">
+                            <div class="weather-icon" id="weatherIcon">☀️</div>
+                            <div class="weather-temp">
+                                <span id="temperature">--</span>°C
+                            </div>
+                            <div class="weather-desc" id="weatherDescription">--</div>
+                        </div>
+                        <div class="weather-details">
+                            <div class="weather-item">
+                                <span class="label">Sensação:</span>
+                                <span id="feelsLike">--</span>°C
+                            </div>
+                            <div class="weather-item">
+                                <span class="label">Humidade:</span>
+                                <span id="humidity">--</span>%
+                            </div>
+                            <div class="weather-item">
+                                <span class="label">Vento:</span>
+                                <span id="windSpeed">--</span> km/h
+                            </div>
+                            <div class="weather-item">
+                                <span class="label">Localização:</span>
+                                <span id="location">--</span>
+                            </div>
+                        </div>
+                        <div class="weather-forecast-container">
+                            <h3>Previsão para os próximos 5 dias</h3>
+                            <div class="weather-forecast" id="weatherForecast"></div>
+                        </div>
+                    </div>
+                    <div class="weather-error" id="weatherError" style="display: none;">
+                        <p>⚠️ Não foi possível carregar os dados meteorológicos.</p>
+                        <p class="error-note">Verifique sua conexão com a internet.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção Restaurantes -->
+            <section class="card restaurants-section">
+                <h2>🍽️ Restaurantes</h2>
+                <div class="restaurants-list">
+                    <div class="restaurant-item">
+                        <h3>Varanda do Alentejo</h3>
+                        <p>Culinária tradicional com ingredientes frescos da horta</p>
+                        <a href="tel:+351963112159" class="btn-link">📞 Ligar</a>
+                    </div>
+                    <div class="restaurant-item">
+                        <h3>FAGO</h3>
+                        <p>Comida gourmet com produtos locais</p>
+                        <a href="tel:+351245089057" class="btn-link">📞 Ligar</a>
+                    </div>
+                    <div class="restaurant-item">
+                        <h3>Filip.é</h3>
+                        <p>Churrasqueira especialista em cogumelos</p>
+                        <a href="tel:+351245993458" class="btn-link">📞 Ligar</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção Atividades -->
+            <section class="card activities-section">
+                <h2>🎯 Atividades</h2>
+                <div class="activities-list">
+                    <a href="https://www.pombais.pt/turismo/" class="activity-item">
+                        <h3> Passeio de Buggy</h3>
+                        <p>Conheça os melhores trilhos com adrenalina</p>
+                    </a>
+                    <a href="https://oldschoolalentejotours.com/" class="activity-item">
+                        <h3>Passeios de UMM</h3>
+                        <p>Passeios de jipe clássico pelas melhores paisagens</p>
+                    </a>
+                    <a href="https://www.caballosmarvao.com/" class="activity-item">
+                        <h3>Cavalgada</h3>
+                        <p>Passeios a cavalo pelas calçadas e trilhos romanos</p>
+                    </a>
+                    <a href="https://www.instagram.com/explore/locations/709054457/marvao-adventure/" class="activity-item">
+                        <h3>Rotas guiadas a pé</h3>
+                        <p>Os verdadeiros trilhos acompanhados pela história</p>
+                    </a>
+                    <a href="https://www.instagram.com/explore/locations/709054457/marvao-adventure/" class="activity-item">
+                        <h3>Escalada</h3>
+                        <p>Explore caleiras antigas e vias ferrata com vistas infindáveis</p>
+                    </a>
+                    <a href="https://www.instagram.com/cpatricio_birdphotography/reels/" class="activity-item">
+                        <h3>Abrigos de Fotografia de Aves</h3>
+                        <p>Conheça e fotografe espécies locais</p>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2025 Horta do Furão COUNTRY CHARME | Todos os direitos reservados</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
